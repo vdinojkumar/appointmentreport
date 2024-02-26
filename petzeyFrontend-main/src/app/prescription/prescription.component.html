@@ -1,0 +1,20 @@
+<div>
+    <h2>Appointment Report</h2>
+    <hr>
+    </div>
+    <div class="content">
+        <h1>Prescription</h1>
+         
+          <div class="card-symptoms" *ngFor="let prescription of prescriptions">
+            <h3>{{ prescription.title }}</h3>
+            <p *ngFor="let symptom of prescription.symptoms">{{ symptom }}</p>
+            <img class="image" *ngIf="prescription.img" [src]="prescription.img" alt="">
+            <br>
+          </div>
+      </div>
+      <div class="container2">
+        <div class="card-location">
+          <h3>Recommonded Location</h3>
+          <span><img class="rotate" src="../../../assets/location.svg">St.John's Clinic</span>
+          </div>
+        </div>
